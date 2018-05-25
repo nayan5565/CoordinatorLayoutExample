@@ -59,7 +59,7 @@
 
         </android.support.design.widget.AppBarLayout>
 
-        <RelativeLayout
+        <android.support.v7.widget.Toolbar
 
             android:id="@+id/ioexample.toolbar"
             android:layout_width="match_parent"
@@ -70,70 +70,78 @@
             app:layout_anchor="@id/ioexample.appbar"
             app:layout_anchorGravity="bottom"
             app:layout_collapseMode="parallax"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
             app:layout_collapseParallaxMultiplier="0.8"
             app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed">
 
-            <ImageView
-                android:id="@+id/imgMenu"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:src="@drawable/ic_menu" />
-
-            <ImageView
-                android:id="@+id/imgAdmin"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_centerVertical="true"
-                android:layout_toRightOf="@id/imgMenu"
-                android:background="@drawable/circle" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="5dp"
-                android:layout_toRightOf="@id/imgAdmin"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/tvAdmin"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/imgAdmin"
-                    android:text="Nayan"
-                    android:textColor="#000000" />
-
-                <TextView
-                    android:id="@+id/tvAdminNumber"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="01770336603"
-                    android:textColor="#000000" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="25dp"
-                android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
                 <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_star" />
-
-                <TextView
-                    android:id="@+id/tvStar"
+                    android:id="@+id/imgMenu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="User Type"
-                    android:textColor="#000000" />
-            </LinearLayout>
-        </RelativeLayout>
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_menu" />
+
+                <ImageView
+                    android:id="@+id/imgAdmin"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/imgMenu"
+                    android:background="@drawable/circle" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/imgAdmin"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvAdmin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/imgAdmin"
+                        android:text="Nayan"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/tvAdminNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="01770336603"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="25dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_star" />
+
+                    <TextView
+                        android:id="@+id/tvStar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="User Type"
+                        android:textColor="#000000" />
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.Toolbar>
 
         <RelativeLayout
             android:layout_width="match_parent"
