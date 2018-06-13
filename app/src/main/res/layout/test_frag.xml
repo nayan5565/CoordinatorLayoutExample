@@ -1,421 +1,462 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:fillViewport="true"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:fillViewport="true">
 
     <LinearLayout
+        android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+
         android:orientation="vertical">
 
-        <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dp200"
-            android:layout_marginLeft="@dimen/dp8"
-            android:layout_marginRight="@dimen/dp8"
-            android:layout_marginTop="@dimen/dp8">
 
-            <RelativeLayout
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp200"
+                    android:layout_marginLeft="@dimen/dp8"
+                    android:layout_marginRight="@dimen/dp8"
+                    android:layout_marginTop="@dimen/dp8">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tvOrderTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp40"
+                            android:layout_marginTop="@dimen/dp20"
+                            android:text="ঔষুধি অর্ডার"
+                            android:textColor="#000000" />
+
+                        <RelativeLayout
+                            android:id="@+id/rlUp"
+                            android:layout_width="@dimen/dp150"
+                            android:layout_height="@dimen/dp150"
+                            android:layout_below="@id/tvOrderTitle"
+                            android:layout_marginLeft="@dimen/dp10">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/dp35"
+                                android:text="প্রেসক্রিপশন আপলোড"
+                                android:textColor="@color/white" />
+
+                            <ImageView
+                                android:id="@+id/imgTakeImage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="@dimen/dp20"
+                                android:src="@drawable/ic_photo_camera_black_24dp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rlNotification"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@id/rlUp"
+                            android:background="@color/colorAccent"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/imgNotClose"
+                                android:layout_width="@dimen/dp20"
+                                android:layout_height="@dimen/dp20"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="@dimen/dp5"
+                                android:src="@drawable/ic_close_black_24dp" />
+
+                            <TextView
+                                android:id="@+id/tvNotification"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="প্রমোশনাল অফার" />
+
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lnStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp18"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tvOrderStatus"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="অর্ডার স্ট্যাটাস"
+                                    android:textColor="#000000"
+                                    android:textSize="@dimen/sp20" />
+
+                                <TextView
+                                    android:id="@+id/tvStatusType"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/dp5"
+                                    android:text="Pending"
+                                    android:textColor="#000000"
+                                    android:textSize="@dimen/sp16" />
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:layout_width="@dimen/dp170"
+                                android:layout_height="@dimen/dp2"
+                                android:layout_marginTop="@dimen/dp10"
+                                android:background="@color/colorAccent" />
+
+                            <TextView
+                                android:id="@+id/tvOrderSend"
+                                android:layout_width="@dimen/dp170"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp20"
+                                android:text="ঔষুধ লিস্ট থেকে অর্ডার করুন"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/sp20" />
+
+                            <TextView
+                                android:layout_width="@dimen/dp170"
+                                android:layout_height="@dimen/dp2"
+                                android:background="@color/colorAccent" />
+
+                            <TextView
+                                android:id="@+id/tvOldOrder"
+                                android:layout_width="@dimen/dp170"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dp20"
+                                android:text="আগের অর্ডার গুলো থেকে অর্ডার করুন"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/sp20" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp8"
+                    android:layout_marginRight="@dimen/dp8"
+                    android:layout_marginTop="@dimen/dp8">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="ভেজালমুক্ত খাবার অর্ডার করুন"
+                        android:textSize="@dimen/sp20" />
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp8"
+                    android:layout_marginRight="@dimen/dp8"
+                    android:layout_marginTop="@dimen/dp8">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp80">
+
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/viewpagerBanner"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp50"
+                            android:visibility="gone" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recCat"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp70"
+                            android:layout_centerInParent="true" />
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp8"
+                    android:layout_marginRight="@dimen/dp8"
+                    android:layout_marginTop="@dimen/dp8">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="শুধু আপনার স্বাস্থ্যের প্রয়োজনীয় খাবার"
+                        android:textSize="@dimen/sp20" />
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp200"
+                    android:layout_marginLeft="@dimen/dp8"
+                    android:layout_marginRight="@dimen/dp8"
+                    android:layout_marginTop="@dimen/dp8">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tvOrderTitle2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp40"
+                            android:layout_marginTop="@dimen/dp20"
+                            android:text="ঔষুধি অর্ডার"
+                            android:textColor="#000000" />
+
+                        <RelativeLayout
+                            android:id="@+id/rlUp2"
+                            android:layout_width="@dimen/dp150"
+                            android:layout_height="@dimen/dp150"
+                            android:layout_below="@id/tvOrderTitle2"
+                            android:layout_marginLeft="@dimen/dp10">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/dp35"
+                                android:text="প্রেসক্রিপশন আপলোড"
+                                android:textColor="@color/white" />
+
+                            <ImageView
+                                android:id="@+id/imgTakeImage2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="@dimen/dp20"
+                                android:src="@drawable/ic_photo_camera_black_24dp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rlNotification2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@id/rlUp2"
+                            android:background="@color/colorAccent"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/imgNotClose2"
+                                android:layout_width="@dimen/dp20"
+                                android:layout_height="@dimen/dp20"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="@dimen/dp5"
+                                android:src="@drawable/ic_close_black_24dp" />
+
+                            <TextView
+                                android:id="@+id/tvNotification2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="প্রমোশনাল অফার" />
+
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lnStatus2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp18"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tvOrderStatus2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="অর্ডার স্ট্যাটাস"
+                                    android:textColor="#000000"
+                                    android:textSize="@dimen/sp20" />
+
+                                <TextView
+                                    android:id="@+id/tvStatusType2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/dp5"
+                                    android:text="Pending"
+                                    android:textColor="#000000"
+                                    android:textSize="@dimen/sp16" />
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:layout_width="@dimen/dp170"
+                                android:layout_height="@dimen/dp2"
+                                android:layout_marginTop="@dimen/dp10"
+                                android:background="#000000" />
+
+                            <TextView
+                                android:id="@+id/tvOrderSend2"
+                                android:layout_width="@dimen/dp170"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp20"
+                                android:text="ঔষুধ লিস্ট থেকে অর্ডার করুন"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/sp20" />
+
+                            <TextView
+                                android:layout_width="@dimen/dp170"
+                                android:layout_height="@dimen/dp2"
+                                android:background="#000000" />
+
+                            <TextView
+                                android:id="@+id/tvOldOrder2"
+                                android:layout_width="@dimen/dp170"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dp20"
+                                android:text="আগের অর্ডার গুলো থেকে অর্ডার করুন"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/sp20" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
 
                 <TextView
-                    android:id="@+id/tvOrderTitle"
+                    android:id="@+id/tvTop"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/dp40"
-                    android:layout_marginTop="@dimen/dp20"
-                    android:text="ঔষুধি অর্ডার"
-                    android:textColor="#000000" />
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dp30"
+                    android:text="TOP OF THE WEEK"
+                    android:textColor="#D1BF2D"
+                    android:textSize="@dimen/sp25"
+                    android:visibility="gone" />
 
-                <RelativeLayout
-                    android:id="@+id/rlUp"
-                    android:layout_width="@dimen/dp150"
-                    android:layout_height="@dimen/dp150"
-                    android:layout_below="@id/tvOrderTitle"
-                    android:layout_marginLeft="@dimen/dp10"
-                    android:background="@drawable/circle">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="@dimen/dp35"
-                        android:text="প্রেসক্রিপশন আপলোড"
-                        android:textColor="@color/white" />
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recTopWeek"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp30"
+                    android:visibility="gone" />
 
-                    <ImageView
-                        android:id="@+id/imgTakeImage"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginBottom="@dimen/dp20"
-                        android:src="@drawable/ic_menu" />
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/rlNotification"
+                <TextView
+                    android:id="@+id/tvTrendy"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_toRightOf="@id/rlUp"
-                    android:background="@color/colorAccent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dp30"
+                    android:text="NEW AND TRENDY"
+                    android:textColor="#99BF04"
+                    android:textSize="@dimen/sp25"
+                    android:visibility="gone" />
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recNewTrend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp30"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp30"
                     android:visibility="gone">
 
-                    <ImageView
-                        android:id="@+id/imgNotClose"
-                        android:layout_width="@dimen/dp20"
-                        android:layout_height="@dimen/dp20"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginRight="@dimen/dp5"
-                        android:src="@drawable/ic_arrow_forward_24dp" />
-
                     <TextView
-                        android:id="@+id/tvNotification"
+                        android:id="@+id/tvFlash"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
-                        android:text="প্রমোশনাল অফার" />
+                        android:text="FLASH DETAILS"
+                        android:textColor="#4E6BE4"
+                        android:textSize="@dimen/sp25" />
 
+                    <TextView
+                        android:id="@+id/tvTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp20"
+                        android:text="12:55:21"
+                        android:textSize="@dimen/sp20" />
 
                 </RelativeLayout>
 
-                <LinearLayout
-                    android:id="@+id/lnStatus"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:gravity="center"
-                    android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/tvOrderStatus"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/dp18"
-                        android:text="অর্ডার স্ট্যাটাস"
-                        android:textColor="#000000"
-                        android:textSize="@dimen/sp20" />
-
-                    <TextView
-                        android:layout_width="@dimen/dp170"
-                        android:layout_height="@dimen/dp2"
-                        android:layout_marginTop="@dimen/dp10"
-                        android:background="@color/colorPrimary" />
-
-                    <TextView
-                        android:id="@+id/tvOrderSend"
-                        android:layout_width="@dimen/dp170"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/dp20"
-                        android:text="ঔষুধ লিস্ট থেকে অর্ডার করুন"
-                        android:textColor="#000000"
-                        android:textSize="@dimen/sp20" />
-
-                    <TextView
-                        android:layout_width="@dimen/dp170"
-                        android:layout_height="@dimen/dp2"
-                        android:background="@color/colorPrimary" />
-
-                    <TextView
-                        android:id="@+id/tvOldOrder"
-                        android:layout_width="@dimen/dp170"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/dp20"
-                        android:text="আগের অর্ডার গুলো থেকে অর্ডার করুন"
-                        android:textColor="#000000"
-                        android:textSize="@dimen/sp20" />
-
-                </LinearLayout>
-
-            </RelativeLayout>
-
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp8"
-            android:layout_marginRight="@dimen/dp8"
-            android:layout_marginTop="@dimen/dp8">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="ভেজালমুক্ত খাবার অর্ডার করুন"
-                android:textSize="@dimen/sp20" />
-
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp8"
-            android:layout_marginRight="@dimen/dp8"
-            android:layout_marginTop="@dimen/dp8">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp80">
-
-                <android.support.v4.view.ViewPager
-                    android:id="@+id/viewpagerBanner"
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recFlash"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/dp50"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp30"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnViewAll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dp30"
+                    android:text="VIEW ALL"
+                    android:textSize="@dimen/sp25"
                     android:visibility="gone" />
 
                 <android.support.v7.widget.RecyclerView
-                    android:id="@+id/recCat"
+                    android:id="@+id/recBrand"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/dp70"
-                    android:layout_centerInParent="true" />
-
-
-            </RelativeLayout>
-
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp8"
-            android:layout_marginRight="@dimen/dp8"
-            android:layout_marginTop="@dimen/dp8">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="শুধু আপনার স্বাস্থ্যের প্রয়োজনীয় খাবার"
-                android:textSize="@dimen/sp20" />
-
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dp200"
-            android:layout_marginLeft="@dimen/dp8"
-            android:layout_marginRight="@dimen/dp8"
-            android:layout_marginTop="@dimen/dp8">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/dp40"
-                    android:layout_marginTop="@dimen/dp20"
-                    android:text="ঔষুধি অর্ডার"
-                    android:textColor="#000000" />
-
-                <RelativeLayout
-                    android:layout_width="@dimen/dp150"
-                    android:layout_height="@dimen/dp150"
-                    android:layout_marginLeft="@dimen/dp10"
-                    android:background="@drawable/circle">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="@dimen/dp35"
-                        android:text="প্রেসক্রিপশন আপলোড"
-                        android:textColor="@color/white" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginBottom="@dimen/dp20"
-                        android:src="@drawable/ic_menu" />
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@color/colorAccent"
-                    android:visibility="gone">
-
-                    <ImageView
-                        android:layout_width="@dimen/dp20"
-                        android:layout_height="@dimen/dp20"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginRight="@dimen/dp5"
-                        android:src="@drawable/ic_arrow_forward_24dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:text="প্রমোশনাল অফার" />
+                    android:layout_marginBottom="@dimen/dp15"
+                    android:visibility="gone" />
 
 
-                </RelativeLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/dp18"
-                        android:text="অর্ডার স্ট্যাটাস"
-                        android:textColor="#000000"
-                        android:textSize="@dimen/sp20" />
-
-                    <TextView
-                        android:layout_width="@dimen/dp170"
-                        android:layout_height="@dimen/dp2"
-                        android:layout_marginTop="@dimen/dp10"
-                        android:background="@color/colorPrimary" />
-
-                    <TextView
-                        android:layout_width="@dimen/dp170"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/dp20"
-                        android:text="ঔষুধ লিস্ট থেকে অর্ডার করুন"
-                        android:textColor="#000000"
-                        android:textSize="@dimen/sp20" />
-
-                    <TextView
-                        android:layout_width="@dimen/dp170"
-                        android:layout_height="@dimen/dp2"
-                        android:background="@color/colorPrimary" />
-
-                    <TextView
-                        android:layout_width="@dimen/dp170"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/dp20"
-                        android:text="আগের অর্ডার গুলো থেকে অর্ডার করুন"
-                        android:textColor="#000000"
-                        android:textSize="@dimen/sp20" />
-
-                </LinearLayout>
-
-            </RelativeLayout>
-
-        </android.support.v7.widget.CardView>
-        <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dp200"
-            android:layout_marginLeft="@dimen/dp8"
-            android:layout_marginRight="@dimen/dp8"
-            android:layout_marginTop="@dimen/dp8">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/dp40"
-                    android:layout_marginTop="@dimen/dp20"
-                    android:text="ঔষুধি অর্ডার"
-                    android:textColor="#000000" />
-
-                <RelativeLayout
-                    android:layout_width="@dimen/dp150"
-                    android:layout_height="@dimen/dp150"
-                    android:layout_marginLeft="@dimen/dp10"
-                    android:background="@drawable/circle">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="@dimen/dp35"
-                        android:text="প্রেসক্রিপশন আপলোড"
-                        android:textColor="@color/white" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginBottom="@dimen/dp20"
-                        android:src="@drawable/ic_menu" />
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@color/colorAccent"
-                    android:visibility="gone">
-
-                    <ImageView
-                        android:layout_width="@dimen/dp20"
-                        android:layout_height="@dimen/dp20"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginRight="@dimen/dp5"
-                        android:src="@drawable/ic_arrow_forward_24dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:text="প্রমোশনাল অফার" />
+            </LinearLayout>
 
 
-                </RelativeLayout>
+        </ScrollView>
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/dp18"
-                        android:text="অর্ডার স্ট্যাটাস"
-                        android:textColor="#000000"
-                        android:textSize="@dimen/sp20" />
-
-                    <TextView
-                        android:layout_width="@dimen/dp170"
-                        android:layout_height="@dimen/dp2"
-                        android:layout_marginTop="@dimen/dp10"
-                        android:background="@color/colorPrimary" />
-
-                    <TextView
-                        android:layout_width="@dimen/dp170"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/dp20"
-                        android:text="ঔষুধ লিস্ট থেকে অর্ডার করুন"
-                        android:textColor="#000000"
-                        android:textSize="@dimen/sp20" />
-
-                    <TextView
-                        android:layout_width="@dimen/dp170"
-                        android:layout_height="@dimen/dp2"
-                        android:background="@color/colorPrimary" />
-
-                    <TextView
-                        android:layout_width="@dimen/dp170"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/dp20"
-                        android:text="আগের অর্ডার গুলো থেকে অর্ডার করুন"
-                        android:textColor="#000000"
-                        android:textSize="@dimen/sp20" />
-
-                </LinearLayout>
-
-            </RelativeLayout>
-
-        </android.support.v7.widget.CardView>
     </LinearLayout>
 
 
